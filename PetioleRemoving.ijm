@@ -4,6 +4,8 @@ path = getDirectory("image");
 usIndex=lastIndexOf(path,"_");
 label=substring(path,usIndex+1);
 label=substring(label,0,5);
+run("Measure");
+run("Clear Results");
 saveAs("Results", path+label+".txt");
 if(File.exists(path+label+"\\")!=1){
 File.makeDirectory(path+label+"\\");
